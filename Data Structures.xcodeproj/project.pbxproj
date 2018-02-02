@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424BCE1D20225F1400996968 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424BCE1B20225F1400996968 /* FileController.cpp */; };
+		424C11062024F78D009B6D63 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424C11042024F78D009B6D63 /* CrimeData.cpp */; };
 		42FE25832022449E002B933B /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42FE25822022449E002B933B /* Runner.cpp */; };
 		42FE258620224500002B933B /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42FE258420224500002B933B /* Controller.cpp */; };
 		42FE259820224B04002B933B /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42FE259620224B04002B933B /* Timer.cpp */; };
@@ -25,9 +27,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		424BCE1B20225F1400996968 /* FileController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileController.cpp; sourceTree = "<group>"; };
+		424BCE1C20225F1400996968 /* FileController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileController.hpp; sourceTree = "<group>"; };
+		424C11032024F78D009B6D63 /* crime.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crime.csv; sourceTree = "<group>"; };
+		424C11042024F78D009B6D63 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
+		424C11052024F78D009B6D63 /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CrimeData.hpp; sourceTree = "<group>"; };
 		42FE256F2022434F002B933B /* Data Structures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data Structures"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FE25822022449E002B933B /* Runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
-		42FE258420224500002B933B /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		42FE258420224500002B933B /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../Controller.cpp; sourceTree = "<group>"; };
 		42FE258520224500002B933B /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
 		42FE259620224B04002B933B /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		42FE259720224B04002B933B /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
@@ -75,9 +82,11 @@
 		42FE257E2022445D002B933B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				42FE258520224500002B933B /* Controller.hpp */,
-				42FE258420224500002B933B /* Controller.cpp */,
 				42FE2589202247E8002B933B /* Tools */,
+				424BCE1B20225F1400996968 /* FileController.cpp */,
+				424BCE1C20225F1400996968 /* FileController.hpp */,
+				42FE258420224500002B933B /* Controller.cpp */,
+				42FE258520224500002B933B /* Controller.hpp */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,6 +101,9 @@
 		42FE258020224475002B933B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				424C11032024F78D009B6D63 /* crime.csv */,
+				424C11042024F78D009B6D63 /* CrimeData.cpp */,
+				424C11052024F78D009B6D63 /* CrimeData.hpp */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -170,8 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FE258620224500002B933B /* Controller.cpp in Sources */,
+				424C11062024F78D009B6D63 /* CrimeData.cpp in Sources */,
 				42FE259820224B04002B933B /* Timer.cpp in Sources */,
 				42FE25832022449E002B933B /* Runner.cpp in Sources */,
+				424BCE1D20225F1400996968 /* FileController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

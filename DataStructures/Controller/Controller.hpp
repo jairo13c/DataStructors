@@ -12,10 +12,13 @@
 #include <iostream>
 #include <vector>
 #include "Tools/Timer.hpp"
+#include "FlieController.hpp"
 
 
 class Controller
 {
+private:
+    void findMaxAndMin();
 public:
     void start();
 };

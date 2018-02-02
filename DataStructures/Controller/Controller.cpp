@@ -19,11 +19,10 @@ void Controller :: start()
     codeTimer.displayInformation();
     codeTimer.resetTimer();
     codeTimer.startTimer();
-    for(int index = 0; index < 500; index++)
-    {
-        cout << "index is" << index << "\t";
     
-    }
+    vector<CrimeData> myData = FileController :: readCrimeDataToVector ()
+    
     codeTimer.stopTimer();
     codeTimer.displayInformation();
+   
 }
