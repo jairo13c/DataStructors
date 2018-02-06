@@ -12,13 +12,15 @@
 #include <iostream>
 #include <vector>
 #include "Tools/Timer.hpp"
-#include "FlieController.hpp"
+#include "FileController.hpp"
+#include "../model/Array.hpp"
 
 
 class Controller
 {
 private:
     void findMaxAndMin();
+    void testArray();
 public:
     void start();
 };
