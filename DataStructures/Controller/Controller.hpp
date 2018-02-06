@@ -14,6 +14,7 @@
 #include "Tools/Timer.hpp"
 #include "FileController.hpp"
 #include "../model/Array.hpp"
+#include "../Testers/ArrayTester.hpp"
 
 
 class Controller
