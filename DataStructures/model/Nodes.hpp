@@ -9,7 +9,7 @@
 #ifndef Nodes_hpp
 #define Nodes_hpp
 
-#include "Controller.hpp"
+ 
 
 //this section is avaible to all the subclasses of node
 protected:
@@ -27,13 +27,13 @@ Node<Type> :: Node()
     //needed for defualt constructor complication
     //since when we create a stucture it does not have an item to store yet
 }
-templete <class Type>
+template <class Type>
 Node<Type> :: Node(Type data)
 {
     this->data = data;
 }
 template <class Type>
-void node<Type> :: setData(Type data)
+void ode<Type> :: setData(Type data)
 {
     this->data = data)
 }

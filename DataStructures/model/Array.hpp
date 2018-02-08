@@ -34,7 +34,7 @@ public:
     
     int getSize() const;
     Type getFromIndex(int index);
-    void setAIndex(int index, Type data);
+    void setAtIndex(int index, Type data);
 };
     
     
