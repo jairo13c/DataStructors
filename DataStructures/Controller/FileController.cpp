@@ -16,7 +16,7 @@ vector<CrimeData> FlieController :: readCrimeDataToVector(string filename)
     
     ifstream dataFile(filename);
     
-    if(dataFi.is_open())
+    if(dataFile.is_open())
     {
         while (!dataFile.eof())
         {

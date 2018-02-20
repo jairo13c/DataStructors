@@ -14,7 +14,7 @@ using namespace std;
 #ifndef Array_hpp
 #define Array_hpp
 
-template < class Type>
+template <class Type>
 class Array
 {
 private:
@@ -40,7 +40,7 @@ public:
     void setAtIndex(int index, Type data);
 };
 
-template < class Type>
+template <class Type>
 Array<Type> :: Array(int size)
 {
     assert(size > 0);
@@ -74,7 +74,7 @@ Array<Type> :: ~Array()
 }
 
 
-template < class Type>
+template <class Type>
 Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
     {
         if (&toAssign != this)

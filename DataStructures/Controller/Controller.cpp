@@ -7,22 +7,60 @@
 //
 
 #include "Controller.hpp"
-
 using namespace std;
 
 void Controller :: start()
 {
     Timer codeTimer;
     codeTimer.startTimer();
-    cout << "look code on screen" << endl;
+    cout << "look code on the screen" <<endl;
     codeTimer.stopTimer();
-    codeTimer.displayInformation();
+    codeTimer.displayInformatin();
     codeTimer.resetTimer();
-    codeTimer.startTimer();
+    codeTimer.startTimer
     
-    vector<CrimeData> myData = FileController :: readCrimeDataToVector ()
+    vector<CrimeData> myData = FileController :: readCrimeDataToVector("/Users/jcor3400/Downloads/crime.csv");
     
-    codeTimer.stopTimer();
-    codeTimer.displayInformation();
-   
+    int minIndex = 0;
+    int maxIndex = 0;
+    
+    for(int index 1; index < myData.size(); index++)
+    {
+        if(myData [minIndex] > myData [index])
+        {
+            minIndex = index;
+        }
+        
+        if(myData [maxIndex] <myData[index])
+        {
+            maxIndex = index;
+        }
+        
+    }
+    searchTimer.stopTimer();
+    cout << "the smallest crime start is at" <<minIndex << " and it is" <<myData[minIndex] << end1;
+    cout << "the largest crimee sstart is at" << "and it is" << myData[maxIndex] << end1;
+    searchTimer.dsplayInformation();
+    
+    
+    
 }
+
+void Controller :: findMaxAndMin()
+{
+    
+}
+void Controller :: testArray()
+{
+    Array<int> jairoArray(45);
+    
+    jairoArray[0] = 123;
+    jairoArray.setAtIndex(0, 321);
+    
+    cout << jairoArray[0]<<endl;
+}
+
+
+
+
+
