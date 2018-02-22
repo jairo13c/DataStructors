@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "List.hpp"
 
+
 using namespace std; //used for keyword access. use this to make sure your pointers are ponting to the right things
 
 template <class Type>
@@ -32,10 +33,10 @@ public:
     LinearNode<Type> * getEnd();
 
     //structure Methods
-    void add(TType item);
-    void addAtIndex(int index, Type item);
-    Type getFromIndex(int iindex);
-    Type removee(int index);
+    virtual void add(Type item);
+    virtual void addAtIndex(int index, Type item);
+    virtual Type getFromIndex(int iindex);
+    virtual Type removee(int index);
 };
 template <class Type>
 LinkedList<Type> :: LinkedList()
