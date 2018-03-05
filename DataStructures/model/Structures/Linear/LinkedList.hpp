@@ -26,7 +26,7 @@ public:
     //constructors
     LinkedList();
     //Destructor
-    virtual ~LinkedListt(); //virtual so it can be overriddden.
+    virtual ~LinkedList(); //virtual so it can be overriddden.
     //helper methods
     int getSize () const;
     LinearNode<Type> * getFront();
@@ -36,7 +36,7 @@ public:
     virtual void add(Type item);
     virtual void addAtIndex(int index, Type item);
     virtual Type getFromIndex(int iindex);
-    virtual Type removee(int index);
+    virtual Type remove(int index);
 };
 template <class Type>
 LinkedList<Type> :: LinkedList()
@@ -48,23 +48,23 @@ LinkedList<Type> :: LinkedList()
 template <class Type>
 LinkedList<Type> :: ~LinkedList()
 {
-    LinearNode<Type> * desroyStructure = front;
+    LinearNode<Type> * destroyStructure = front;
     while (front != nullptr)
             
     {
         front = destroyStructure->getNextNode();
-        delete destroyySttructure;
+        delete destroyStructure;
         destroyStructure = front;
     }
 }
 template <class Type>
 void LinkedList<Type> :: add(Type item)
 {
-    LinkedNode<Type> * newData = new LinearNode<Type(item);
+    LinearNode<Type> * newData = new LinearNode<Type>(item);
     
     if (this->size== 0)
     {
-        this->frony = newData;
+        this->front = newData;
     }
     else
     {
@@ -86,7 +86,7 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
     else
     {
         LinearNode<Type> * toBeAdded = new LinearNode<Type>(item);
-        if (index == )
+        if (index == 0 )
         {
             toBeAdded->setNextNode(front);
             front = toBeAdded;
@@ -94,20 +94,20 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
         else
         {
             LinearNode<Type> * previous = nullptr;
-            LineaNode<Type> * current = front;
+            LinearNode<Type> * current = front;
             for (int position = 0; position < index; position++)
             {
                 previous = current;
                 current = current->getNextNode();
             }
-            previous->setNode(toBeAdded);
+            previous->setNextNode(toBeAdded);
             toBeAdded->setNextNode(current);
         }
         this->size++;
     }
 }
 template <class Type>
-Type LinkedList<Type> remove(int index)
+Type LinkedList<Type> :: remove(int index)
 {
     assert(index >= 0 && index < this->size);
     
@@ -127,7 +127,7 @@ Type LinkedList<Type> remove(int index)
         for (int position = 0; position < index; position++)
         {
             previous = current;
-            current = current->getNexNode();
+            current = current-> getNextNode();
         }
         
         toBeRemoved = current;
@@ -139,7 +139,7 @@ Type LinkedList<Type> remove(int index)
         }
     }
     
-    this-size -= 1;
+    this->size -= 1;
     
     removedData = toBeRemoved->getData();
     delete toBeRemoved;
@@ -156,7 +156,7 @@ LinearNode<Type> * LinkedList<Type> :: getFront()
     return this->front;
 }
 template <class Type>
-int LinkedList<Type :: gtSize() const
+int LinkedList<Type> :: getSize() const
 {
     return this->size;
 }

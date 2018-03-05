@@ -9,8 +9,9 @@
 #ifndef Nodes_hpp
 #define Nodes_hpp
 
- 
-
+template <class Type>
+class Node
+{
 //this section is avaible to all the subclasses of node
 protected:
     Type data;
@@ -33,9 +34,9 @@ Node<Type> :: Node(Type data)
     this->data = data;
 }
 template <class Type>
-void ode<Type> :: setData(Type data)
+void Node<Type> :: setData(Type data)
 {
-    this->data = data)
+    this->data = data;
 }
 
 template <class Type>

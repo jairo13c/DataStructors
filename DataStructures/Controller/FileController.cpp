@@ -20,13 +20,13 @@ vector<CrimeData> FlieController :: readCrimeDataToVector(string filename)
     {
         while (!dataFile.eof())
         {
-            getting(dataFile, currentCSVLine, '\r');
-            if ( rowCount! = 0)
+            getting(dataFile,currentCSVLine, '\r');
+            if (rowCount! = 0)
             {
-            if(currentCSVLine.lenght()!= 0)
+                if(currentCVLine.length()!= 0)
                 {
-                    CrimeData ro(currentCSVLine);
-                    CrimeVector.push_back(row);
+                    CrimeData row(currentCVLine);
+                    crimeVector.push_back(row);
                 }
             }
             rowCount++;
@@ -35,7 +35,7 @@ vector<CrimeData> FlieController :: readCrimeDataToVector(string filename)
     }
     else
     {
-        cerr << "NO FILE" << end;
+        cerr << "NO FILE" << endl;
     }
     
     return crimeVector;

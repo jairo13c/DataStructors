@@ -11,7 +11,7 @@
 
 
 #include <assert.h>
-#include "../Nodes/LinearNode.hpp"
+#include "../../Nodes/LinearNode.hpp"
 
 template <class Type>
 class List
@@ -21,7 +21,7 @@ int size;
 
 public: //structures
 virtual void add(Type item) = 0;
-virtual void addAtIndex(int index, Type item) =0;
+virtual void addAtIndex(int index, Type item) = 0;
 virtual Type remove(int index) = 0;
 virtual Type getFromIndex(int index) = 0;
 //helper

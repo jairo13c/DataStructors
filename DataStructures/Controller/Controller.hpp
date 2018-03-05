@@ -16,6 +16,14 @@
 #include "../model/Array.hpp"
 #include "../Testers/ArrayTester.hpp"
 
+#include "../Testers/LinkedListTester.hpp"
+#include "../Testers/TestStacksAndQueues.hpp"
+#include "../TestersRecursionTester.hpp"
+
+
+
+
+
 
 class Controller
 {

@@ -6,13 +6,15 @@
 //  Copyright © 2018 Cortez, Jairo. All rights reserved.
 //
 
+
+
+
+#ifndef Array_hpp
+#define Array_hpp
 #include <assert.h>
 #include <iostream>
 
 using namespace std;
-
-#ifndef Array_hpp
-#define Array_hpp
 
 template <class Type>
 class Array
@@ -76,15 +78,15 @@ Array<Type> :: ~Array()
 
 template <class Type>
 Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
-    {
+{
         if (&toAssign != this)
-    {
-        if (size !=toAssign.getSize())
         {
-            delete [] internalArray;
-            size = toAssign.getSize();
-            internalArray = new Type [size];
-        }
+            if (size !=toAssign.getSize())
+            {
+                delete [] internalArray;
+                size = toAssign.getSize();
+                internalArray = new Type [size];
+            }
         
         for (int index = 0; index < size; index++)
         {
@@ -109,12 +111,7 @@ Type Array<Type> :: operator [] (int index)const
     assert(index >= 0 && index < size);
     return internalArray[index];
 }
-
-
-
-
-
-//#basc
+//basic
 template <class Type>
 int Array<Type> :: getSize() const
 {
@@ -142,16 +139,10 @@ Type Array<Type> :: getFromIndex(int index)
 template <class Type>
 void Array<Type> :: setAtIndex(int pos, Type item)
 {
-    assert(pos >=0 && pos < size);
+    assert(pos >= 0 && pos < size);
     internalArray[pos] = item;
 }
 
-
-
-
-        
-        
-        
         
 #endif /* Array_hpp */
 

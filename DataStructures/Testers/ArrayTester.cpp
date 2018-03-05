@@ -37,11 +37,11 @@ void ArrayTester :: testerArrayUse()
     cout << thirdArray[5] << endl;
     
 }
-    vector<CrimeData> test = FileController :: readCrimeDtaToVector("/Users/jcor3400/DataSources/DataStructors/DataStructures/Data/crime.csv")
+vector<CrimeData> test = FlieController :: readCrimeDataToVector("/Users/jcor3400/DataSources/DataStructors/DataStructures/Data/crime.csv");
     int array = test.size();
 
     Array<CrimeData> data(arraySize);
-    for (int index = 0; index < arraySi; index++)
+    for (int index = 0; index < arraySize; index++)
     {
         data[index] = test[index];
     }
@@ -50,7 +50,7 @@ void ArrayTester :: testerArrayUse()
     Timer arrayTimer;
 
     vectorTimer.startTimer();
-        cout << test[3425] << endl;
+    cout << test[3425] << endl;
     vectorTimer.stopTimer();
     vectorTimer.displayInformation();
 

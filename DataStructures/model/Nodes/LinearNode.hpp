@@ -24,13 +24,14 @@ public:
     LinearNode(Type data, LinearNode <Type> * next);
     //Methods
     void setNextNode(LinearNode<Type> * next);
-    LinearNode<Type> * getNode();
+    LinearNode<Type> * getNextNode();
+};
     //constructors
     /**
      This constructor is used for buildig the raw structures before values are known.
      */
     template <class Type>
-    LinearNode<Type> :: LinearNode() : NodeType>()
+    LinearNode<Type> :: LinearNode() : Node<Type>()
     {
         this->next = nullptr;
     }
@@ -38,7 +39,7 @@ public:
      this constructor is used to create a referance to a instance with data and a known link.
      */
     template <class Type>
-    LinearNode<Type :: LinearNode(Type data) : Node<Type>(data)
+    LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data)
     {
         this->next = nullptr;
     }
@@ -50,12 +51,13 @@ public:
     template <class Type>
     void LinearNode<Type> :: setNextNode(LinearNode<Type> * nextNodePointer )
     {
-        LinearNode<Type> * LinearNode<Type> :: getNextNode()
-        {
-            return next
-        }
+        this->next = nextNodePointer;
     }
     
-};
+template <class Type>
+LinearNode<Type> * LinearNode<Type>:: getNextNode()
+{
+    return next;
+}
 
 #endif /* LinearNode_hpp */
