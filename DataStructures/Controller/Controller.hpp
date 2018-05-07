@@ -14,16 +14,11 @@
 #include "Tools/Timer.hpp"
 #include "FileController.hpp"
 #include "../model/Array.hpp"
-#include "../Testers/ArrayTester.hpp"
 
+#include "../Testers/ArrayTester.hpp"
 #include "../Testers/LinkedListTester.hpp"
 #include "../Testers/TestStacksAndQueues.hpp"
-#include "../TestersRecursionTester.hpp"
-
-
-
-
-
+#include "../Testers/RecursionTester.hpp"
 
 class Controller
 {
