@@ -137,7 +137,7 @@ Type Array<Type> :: getFromIndex(int index)
     
 }
 template <class Type>
-void Array<Type> :: setAtIndex(int pos, Type item)
+void Array<Type> :: getAtIndex(int pos, Type item)
 {
     assert(pos >= 0 && pos < size);
     internalArray[pos] = item;
