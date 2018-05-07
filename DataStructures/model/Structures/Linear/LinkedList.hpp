@@ -8,9 +8,11 @@
 
 #ifndef LinkedList_hpp
 #define LinkedList_hpp
+#include "/Users/jcor3400/DataSources/DataStructors/DataStructures/model/Structures/Linear/LinkedList.hpp"
 
-#include <stdio.h>
+#include <iostream>
 #include "List.hpp"
+
 
 
 using namespace std; //used for keyword access. use this to make sure your pointers are ponting to the right things
