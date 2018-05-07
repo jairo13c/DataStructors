@@ -1,4 +1,4 @@
-//
+ //
 //  FileController.cpp
 //  Data Structures
 //
@@ -20,8 +20,8 @@ vector<CrimeData> FlieController :: readCrimeDataToVector(string filename)
     {
         while (!dataFile.eof())
         {
-            getting(dataFile,currentCSVLine, '\r');
-            if (rowCount! = 0)
+            getline(dataFile, currentCVLine, '\r');
+            if (rowCount != 0)
             {
                 if(currentCVLine.length()!= 0)
                 {

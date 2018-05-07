@@ -25,34 +25,29 @@ class FlieController
 {
 
 public:
-    static vector<CrimeData> readCrimeDataToVector(string filename);
+    static LinkedList<CrimeData> readToList(string filename);
 };
-vector<CrimeData> FlieController :: readCrimeDataToVector(string filename)
+LinkedList<CrimeData> FlieController :: (string fileName)
 {
-    std :: vector<CrimeData> crimeVector;
+    LinkedList<CrimeData> crimes;
+    
     string currentCSVLine;
     int rowCount = 0;
     
-    ifstream dataFile(filename);
+    ifstream dataFile(fileName);
     
-    //if the file exists at that path.
     if (dataFile.is_open())
     {
-        //keep reading until ypu are at the end of the file.
         while (!dataFile.eof())
         {
-            //grab each line from the csv separeted by the carriage return character.
-            getline(dataFile,currentCSVLine, '\e');
-            //exclusive header row
-            if(rowCount != 0)
+            getline(dataFile, currentCSVLine, '\r');
+            if (rowCount != 0)
             {
-                //created a crimeData instance from the line. exclusive a blanck line (usually if opened separately)
                 if(currentCSVLine.length() != 0)
                 {
                     CrimeData row(currentCSVLine);
-                    crimeVector.push_back(row);
+                    crimes.add(row);
                 }
-                    
             }
             rowCount++;
         }
@@ -60,10 +55,11 @@ vector<CrimeData> FlieController :: readCrimeDataToVector(string filename)
     }
     else
     {
-        cerr << "NO FLILE" << endl;
+        cerr << "No File" << endl;
     }
     
-    return crimeVector;
+    return crimes;
 }
+
 
 #endif /* FileController_hpp */
